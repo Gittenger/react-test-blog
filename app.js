@@ -1,17 +1,14 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const postsRouter = require('./routes/postsRouter')
 
 // setup
 const app = express()
 app.use(cors())
 
 // app
-app.get('/api', (req, res) => {
-	res.json({
-		message: 'Hello from the server',
-	})
-})
+app.use('/api/posts', postsRouter)
 
 // server
 const db = process.env.DB_CONNECTION.replace(/<password>/, process.env.DB_PW)
