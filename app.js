@@ -14,10 +14,9 @@ app.get('/api', (req, res) => {
 })
 
 // server
-const db = process.env.DB_CONNECTION.replace(
-	/<password>/,
-	process.env.DB_PW
-).replace(/<db_name>/, process.env.DB_NAME)
+const db = process.env.DB_CONNECTION.replace(/<password>/, process.env.DB_PW)
+	.replace(/<user>/, process.env.DB_USER)
+	.replace(/<db_name>/, process.env.DB_NAME)
 
 mongoose
 	.connect(db, {
