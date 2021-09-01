@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.3",
     "react-scripts": "4.0.3",
-    "react-syntax-highlighter": "^15.4.4"
+    "react-syntax-highlighter": "^15.4.4",
+    "sal.js": "^0.8.5",
+    "styled-components": "^5.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
